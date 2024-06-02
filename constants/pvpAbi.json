@@ -1,0 +1,279 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "Index",
+				"type": "uint256"
+			}
+		],
+		"name": "challengAccept",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "opponent",
+				"type": "address"
+			}
+		],
+		"name": "ragister",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "startPvP",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "winner",
+				"type": "address"
+			},
+			{
+				"internalType": "address",
+				"name": "looser",
+				"type": "address"
+			}
+		],
+		"name": "updateStatusPlayer",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "challengeList",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "challenger",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "matchInfoReCeipt",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "match_goingOn",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "s_lastTimeStamp",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "s_isLastDefeated",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "prestigeMap",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "points",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "win",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "loss",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "retrieveChallengeList",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "challenger",
+						"type": "address"
+					}
+				],
+				"internalType": "struct pvp.challenged[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "retrieveIsStarted",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bool",
+						"name": "isPvPactive",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct pvp.initiatePvP",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			}
+		],
+		"name": "retrieveMatchInfoReceipt",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "bool",
+						"name": "match_goingOn",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "s_lastTimeStamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "s_isLastDefeated",
+						"type": "bool"
+					}
+				],
+				"internalType": "struct pvp.matchInfo",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			}
+		],
+		"name": "retrievePrestigePoints",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "points",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "win",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "loss",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct pvp.prestigePoints",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "retrieveStamps",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "startpvp",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "isPvPactive",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

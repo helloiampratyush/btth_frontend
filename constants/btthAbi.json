@@ -1,0 +1,409 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "player",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "rank",
+				"type": "uint256"
+			}
+		],
+		"name": "flameAcuireAchievement",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "player",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "questIndex",
+				"type": "uint256"
+			}
+		],
+		"name": "questCompletionAchievememt",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "player",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			}
+		],
+		"name": "skillAcuireAchievement",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "questIndex",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "level",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "Index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "Maxhealth",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "health",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "attackDamage",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "defense",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "weapon",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "qi",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maxQi",
+				"type": "uint256"
+			}
+		],
+		"name": "characterUpdate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			}
+		],
+		"name": "getCharacterDetails",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "image",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "level",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxHealth",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "health",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "attackDamage",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "defense",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "weapon",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "qi",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maxQi",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct BtthGame.Character",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "to",
+				"type": "address"
+			}
+		],
+		"name": "getInventory",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "maxQi",
+						"type": "uint256"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "qiCost",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BtthGame.Skill[]",
+						"name": "skills",
+						"type": "tuple[]"
+					},
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "color",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "rank",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct BtthGame.Flame[]",
+						"name": "flames",
+						"type": "tuple[]"
+					}
+				],
+				"internalType": "struct BtthGame.CharacterInventory",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "questIndex",
+				"type": "uint256"
+			}
+		],
+		"name": "getQuestStatus",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "color",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "rank",
+				"type": "uint256"
+			}
+		],
+		"name": "inventoeyFlameUpdate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "inventories",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "maxQi",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "qiCost",
+				"type": "uint256"
+			}
+		],
+		"name": "inventorySkillUpdate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "newGame",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "players",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "image",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "level",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maxHealth",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "health",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "attackDamage",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "defense",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "weapon",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "qi",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "maxQi",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
