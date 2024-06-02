@@ -9,7 +9,7 @@ import btthAbi from "../constants/btthAbi.json";
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import { useNotification } from 'web3uikit';
 import { useEffect, useState } from "react"; 
-import {db} from "./firebaseConfig";
+import {db} from "../constants/firebaseConfig";
 import {collection,addDoc, query, where, getDocs, updateDoc} from "firebase/firestore";
 export default function PVP() {
     const { chainId, account, isWeb3Enabled } = useMoralis();

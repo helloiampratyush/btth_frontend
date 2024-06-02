@@ -5,7 +5,7 @@ import ContractAbi from '../constants/loginAbi.json';
 import btthAbi from '../constants/btthAbi.json';
 import btthMapping from '../constants/btthAddress.json';
 import { Card, useNotification } from 'web3uikit';
-import { db } from './firebaseConfig'; // Adjust this path as needed
+import { db } from '../constants/firebaseConfig'; // Adjust this path as needed
 import { getDocs, query, collection, where, updateDoc, doc } from 'firebase/firestore';
 
 export default function Login() {

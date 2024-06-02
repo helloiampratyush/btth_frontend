@@ -9,7 +9,7 @@ import { useMoralis, useWeb3Contract } from "react-moralis";
 import { useNotification } from 'web3uikit';
 import { useEffect, useState } from "react"; 
 import { useRouter } from "next/router";
-import { db } from './firebaseConfig'; // Adjust this path as needed
+import { db } from '../constants/firebaseConfig'; // Adjust this path as needed
 import { getDocs, addDoc,query, collection, where, updateDoc, doc } from 'firebase/firestore';
 async function saveToFireStore(account,maxHp,hp,level,attackDamage,defence,qi,maxQi,weapon,isYourChance,opponenet){
     try{

@@ -1,18 +1,18 @@
-// firebaseConfig.js
 import { initializeApp } from "firebase/app";
-import {getFirestore} from  "firebase/firestore";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDruk9gvnvnoVJdpfm_d3Byrf-pXbIT6xU",
-  authDomain: "btth-de099.firebaseapp.com",
-  projectId: "btth-de099",
-  storageBucket: "btth-de099.appspot.com",
-  messagingSenderId: "688171639073",
-  appId: "1:688171639073:web:b11ba159768667c8769e60",
-  measurementId: "G-XE3DDSWYY3"
+  apiKey: process.env.NEXT_PUBLIC_GOOGLE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGE_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db=getFirestore(app);
-export {db};
+const db = getFirestore(app);
+
+export { db };
