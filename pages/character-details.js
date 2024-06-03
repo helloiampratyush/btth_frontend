@@ -17,19 +17,7 @@ export default function Character() {
     const btthAddress = networkMapping[chainString]?.btthGame[0];
     const dispatch = useNotification();
 
-    useEffect(() => {
-        fetchdatabases();
-        fetchCharacterDetails();
-        fetchInventoryDetails();
-
-        const intervalId = setInterval(() => {
-            fetchCharacterDetails();
-            fetchInventoryDetails();
-        }, 5000);
-
-        return () => clearInterval(intervalId);
-    }, []);
-
+   
     const fetchCharacterDetails = async () => {
         try {
             const characterData = await runContractFunction({
@@ -79,7 +67,6 @@ export default function Character() {
         }
     };
          const handleUsePotion=async(potionName)=>{
-            await fetchdatabases();
             if(potionName=="health potion"&&invData.healthPotion>=1){
                 await runContractFunction({
                     params:{
@@ -335,6 +322,19 @@ export default function Character() {
             }
             
          }
+         useEffect(() => {
+            fetchdatabases();
+            fetchCharacterDetails();
+            fetchInventoryDetails();
+    
+            const intervalId = setInterval(() => {
+                fetchCharacterDetails();
+                fetchInventoryDetails();
+            }, 1000);
+    
+            return () => clearInterval(intervalId);
+        }, [handleUsePotion]);
+    
 
     return (
         <div className="flex flex-col items-center mt-2 bg-purple-900 min-h-screen text-white">
